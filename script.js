@@ -98,19 +98,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle form submission
+    // Handle form submission with Formspree AJAX
     rsvpForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent standard redirect
 
-        // Mock success
         const submitBtn = rsvpForm.querySelector('button[type="submit"]');
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
-            rsvpForm.style.display = 'none';
-            rsvpSuccess.classList.remove('hidden');
-        }, 1000);
+        const formData = new FormData(rsvpForm);
+
+        fetch(rsvpForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                rsvpForm.style.display = 'none';
+                rsvpSuccess.classList.remove('hidden');
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                    submitBtn.textContent = 'Send RSVP';
+                    submitBtn.disabled = false;
+                });
+            }
+        }).catch(error => {
+            alert("Oops! There was a problem submitting your form");
+            submitBtn.textContent = 'Send RSVP';
+            submitBtn.disabled = false;
+        });
     });
 
     // --- Story Slideshow Handling ---
