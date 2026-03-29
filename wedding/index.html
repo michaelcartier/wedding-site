@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina & Michael - We're Getting Married</title>
+    <!-- Use classic serif, elegant sans-serif, and cursive fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Alex+Brush&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Protection Overlay -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-box">
+            <h2 class="password-title">Welcome</h2>
+            <p class="password-text">Please enter the password to view our wedding details.</p>
+            <div class="password-input-group">
+                <input type="password" id="site-password" placeholder="Password (hint: 'love')"
+                    aria-label="Website Password">
+                <button id="submit-password" class="btn btn-primary">Enter</button>
+            </div>
+            <p id="password-error" class="password-error">Incorrect password. Please try again.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">
+                    <div class="logo-mk">
+                        <span class="m">M</span><span class="k">K</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#travel">Travel</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#rsvp" class="nav-btn">RSVP</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h3 class="pre-title">Join us to celebrate the wedding of</h3>
+                <h1 class="couple-names">Karina <span class="ampersand">&</span> Michaël</h1>
+                <div class="hero-details">
+                    <p class="date">Saturday, September 19th, 2026</p>
+                    <p class="venue">Auberge Saint-Gabriel</p>
+                    <p class="address">426 Rue St Gabriel, Montréal, QC H2Y 2Z9</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#rsvp" class="btn btn-primary btn-large glow-effect">Join Us (RSVP)</a>
+                </div>
+            </div>
+            <a href="#schedule" class="scroll-down">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </header>
+
+        <!-- Event Schedule Section -->
+        <section id="schedule" class="section bg-light">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">The Big Day</h2>
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-time">2:30 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Welcome Cocktail</h3>
+                            <p>Settle in, grab a drink, and enjoy the ambiance of the historic Auberge Saint-Gabriel
+                                before we say our "I dos".</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-time">3:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Ceremony</h3>
+                            <p>The main event. Witness our vows and the start of our new chapter together.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-time">4:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Cocktail Hour</h3>
+                            <p>Enjoy hors d'oeuvres and cocktails while we take our first photos as a married couple.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-time">6:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Dinner</h3>
+                            <p>A beautiful curated dining experience in the grand hall.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-time">9:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Party</h3>
+                            <p>Time to hit the dance floor! Bring your best moves and celebrate the night away.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="section bg-dark text-light pt-large pb-large relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+
+            <div class="container relative z-10">
+                <div class="story-grid">
+                    <div class="story-image-container">
+                        <div class="image-frame slideshow-container">
+                            <div class="slides">
+                                <img src="Picture1.jpg" alt="Our memories - 1" class="story-image slide active">
+                                <img src="Picture2.jpg" alt="Our memories - 2" class="story-image slide">
+                                <img src="Picture3.jpg" alt="Our memories - 3" class="story-image slide">
+                                <img src="Picture4.jpg" alt="Our memories - 4" class="story-image slide">
+                                <img src="Picture5.jpg" alt="Our memories - 5" class="story-image slide">
+                            </div>
+                            <button class="slide-nav prev" aria-label="Previous image">&#10094;</button>
+                            <button class="slide-nav next" aria-label="Next image">&#10095;</button>
+                            <div class="slide-dots">
+                                <span class="dot active" data-index="0"></span>
+                                <span class="dot" data-index="1"></span>
+                                <span class="dot" data-index="2"></span>
+                                <span class="dot" data-index="3"></span>
+                                <span class="dot" data-index="4"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h2 class="section-title text-light">Our Story</h2>
+
+                        <div class="story-card">
+                            <h3 class="story-subtitle">How We Met</h3>
+                            <p>It all started at work. What began as casual lunch breaks and shared project deadlines
+                                blossomed into a friendship, and eventually, a beautiful romance that neither of us saw
+                                coming but both of us so desperately needed.</p>
+                        </div>
+
+                        <div class="story-card">
+                            <h3 class="story-subtitle">The Proposal</h3>
+                            <p>During a beautiful trip to Mexico, surrounded by breathtaking views, Michaël got down on
+                                one knee. Instead of crying as she might have expected, Karina started laughing out of
+                                pure joy and surprise—it genuinely was the perfect moment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wedding-party mt-large">
+                    <h2 class="section-title text-center text-light">The Wedding Party</h2>
+                    <div class="party-grid">
+                        <div class="party-member">
+                            <div class="member-role">Karina's Mom</div>
+                            <p class="member-desc">The woman who taught Karina everything about love and grace.</p>
+                        </div>
+                        <div class="party-member">
+                            <div class="member-role">Michaël's Mom</div>
+                            <p class="member-desc">The rock of the family, always there with endless support and love.
+                            </p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Julian</h4>
+                            <div class="member-role">Officiant</div>
+                            <p class="member-desc">A dear friend who knows our story best, honoring us by leading our
+                                ceremony.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Benoit</h4>
+                            <div class="member-role">Best Man</div>
+                            <p class="member-desc">Michaël's partner in crime since day one.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Benjamin</h4>
+                            <div class="member-role">Best Man</div>
+                            <p class="member-desc">Always bringing the laughs and the best advice.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Carlos</h4>
+                            <div class="member-role">Bridesman</div>
+                            <p class="member-desc">Karina's closest confidant and biggest cheerleader.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Diana</h4>
+                            <div class="member-role">Bridesmaid</div>
+                            <p class="member-desc">The sister Karina chose, always ready for an adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel & Accommodations Section -->
+        <section id="travel" class="section bg-light relative overflow-hidden pb-large">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">Travel & Accommodations</h2>
+                <div class="travel-grid mt-large">
+
+                    <div class="travel-card">
+                        <div class="travel-icon">✈️</div>
+                        <h3 class="travel-subtitle">Flights & Arrival</h3>
+                        <p>We recommend flying into <strong>Montréal-Trudeau International Airport (YUL)</strong>. To
+                            give yourself time to settle in before the big Saturday celebration, consider arriving on
+                            Thursday or Friday. Note: Most international visitors will need an <a
+                                href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html"
+                                target="_blank"
+                                style="color: var(--clr-burgundy); text-decoration: underline; font-weight: 500;">eTA
+                                (Electronic Travel Authorization)</a> to enter Canada.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🚕</div>
+                        <h3 class="travel-subtitle">From the Airport</h3>
+                        <p>There is currently no REM train from the airport. <strong>Uber</strong> is the easiest option
+                            (approx. $40 to downtown). Alternatively, the 747 Bus works well and is a cheaper public
+                            transit option.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🚇</div>
+                        <h3 class="travel-subtitle">Getting Around</h3>
+                        <p>Montreal is highly walkable, but the best way to get around is the <strong>STM Metro</strong>
+                            system. You can buy a <a href="https://www.stm.info/en/info/fares/transit-fares/weekly-pass"
+                                target="_blank"
+                                style="color: var(--clr-burgundy); text-decoration: underline; font-weight: 500;">Weekly
+                                Pass</a> or a 3-day pass at any metro station kiosk for unlimited rides!</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🍂</div>
+                        <h3 class="travel-subtitle">September Weather</h3>
+                        <p>September in Montreal is a beautiful transitional month! The days are often warm and sunny,
+                            but the evenings can be quite crisp. We recommend packing light layers for the evening.</p>
+                    </div>
+
+                    <!-- Changed from bg-dark text-light to standard styling -->
+                    <div class="travel-card travel-card-wide">
+                        <div class="travel-icon">🏛️</div>
+                        <h3 class="travel-subtitle">Downtown & Old Port Vibes</h3>
+                        <p>Our venue, Auberge Saint-Gabriel, is located right in the heart of the historic <strong>Old
+                                Port</strong>. Take some time to stroll down the beautiful cobblestone streets, enjoy
+                            the riverside views, pop into the amazing local cafes, and take in the European architecture
+                            that makes Montreal so special!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Details & FAQs Section -->
+        <section id="details" class="section bg-light border-top-subtle">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">Details & FAQs</h2>
+                <div class="faq-grid">
+                    <div class="faq-card">
+                        <div class="faq-icon">👗</div>
+                        <h3>Dress Code</h3>
+                        <p><strong>Formal Attire.</strong> Please dress to impress in your formal best! There are no
+                            specific color requirements, so feel free to wear whatever makes you feel fabulous.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Plus Ones & Kids</h3>
+                        <p><strong>Welcomed!</strong> We want all our loved ones to be there. Plus-ones and children are
+                            more than welcome to join the celebration.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-icon">🎁</div>
+                        <h3>Registry</h3>
+                        <p><strong>Your presence is our present.</strong> We do not have a registry. We are just so
+                            incredibly glad that you will be coming to celebrate with us!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section bg-burgundy text-light rsvp-section">
+            <div class="container relative z-10">
+                <div class="rsvp-container shadow-xl">
+                    <div class="rsvp-header text-center">
+                        <h2 class="section-title text-burgundy">RSVP</h2>
+                        <p class="rsvp-deadline">Please kindly respond by <strong>August 1st, 2026</strong></p>
+                    </div>
+
+                    <form id="rsvp-form" class="rsvp-form">
+                        <div class="form-group">
+                            <label for="name">Full Name(s)</label>
+                            <input type="text" id="name" name="name" required placeholder="Who is attending?">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="attendance">Will you attend?</label>
+                                <select id="attendance" name="attendance" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="yes">Joyfully Accept</option>
+                                    <option value="no">Regretfully Decline</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="guests-group">
+                                <label for="guests">Number of Guests (including you)</label>
+                                <input type="number" id="guests" name="guests" min="1" max="10" placeholder="1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dietary">Dietary Restrictions</label>
+                            <textarea id="dietary" name="dietary" rows="2"
+                                placeholder="Let us know if you or your guests have any allergies..."></textarea>
+                        </div>
+
+                        <div class="form-group song-request">
+                            <label for="song">Song Request 🎵</label>
+                            <p class="form-hint">Help us build our party playlist!</p>
+                            <input type="text" id="song" name="song" placeholder="Track Name - Artist">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full glow-effect">Send RSVP</button>
+                    </form>
+                    <div id="rsvp-success" class="rsvp-success hidden">
+                        <h3>Thank you!</h3>
+                        <p>Your RSVP has been received. We can't wait to see you!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="logo-mk footer-logo">
+                    <span class="m">M</span><span class="k">K</span>
+                </div>
+                <p>&copy; 2026 Karina & Michaël. All rights reserved.</p>
+                <p class="made-with-love">Made with ♥</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
