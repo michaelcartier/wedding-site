@@ -98,6 +98,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Handle Plus One dynamically
+    const plusOneCheckbox = document.getElementById('plus_one');
+    const plusOneNameContainer = document.getElementById('plus-one-name-container');
+    const plusOneNameInput = document.getElementById('plus_one_name');
+
+    plusOneCheckbox.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            plusOneNameContainer.style.display = 'block';
+            plusOneNameInput.required = true;
+        } else {
+            plusOneNameContainer.style.display = 'none';
+            plusOneNameInput.required = false;
+            plusOneNameInput.value = '';
+        }
+    });
+
+    // Handle Kids dynamically
+    const kidsSelect = document.getElementById('kids');
+    const kidsNamesContainer = document.getElementById('kids-names-container');
+
+    kidsSelect.addEventListener('change', (e) => {
+        const numKids = parseInt(e.target.value) || 0;
+        kidsNamesContainer.innerHTML = ''; // Clear existing inputs
+        
+        for (let i = 1; i <= numKids; i++) {
+            const kidGroup = document.createElement('div');
+            kidGroup.style.marginBottom = '5px';
+            kidGroup.innerHTML = `
+                <label for="kid_name_${i}" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Kid ${i}'s Name</label>
+                <input type="text" id="kid_name_${i}" name="kid_name_${i}" placeholder="Kid ${i}'s name" required style="width: 100%;">
+            `;
+            kidsNamesContainer.appendChild(kidGroup);
+        }
+    });
+
     // Handle form submission with Formspree AJAX
     rsvpForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevent standard redirect

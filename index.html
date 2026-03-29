@@ -326,7 +326,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="form-group" style="width: 100%;">
                                 <label for="attendance">Will you attend?</label>
                                 <select id="attendance" name="attendance" required>
                                     <option value="" disabled selected>Select an option</option>
@@ -334,16 +334,36 @@
                                     <option value="no">Regretfully Decline</option>
                                 </select>
                             </div>
+                        </div>
 
-                            <div class="form-group" id="guests-group" style="display: none;">
-                                <div style="margin-bottom: 15px;">
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--clr-text);">
-                                        <input type="checkbox" id="plus_one" name="plus_one" value="Yes" style="width: 18px; height: 18px; accent-color: var(--clr-burgundy);">
-                                        Bringing a +1?
-                                    </label>
+                        <!-- Guest details (shown only if attending) -->
+                        <div id="guests-group" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.05);">
+                            
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--clr-text); font-weight: 500;">
+                                    <input type="checkbox" id="plus_one" name="plus_one" value="Yes" style="width: 20px; height: 20px; accent-color: var(--clr-burgundy);">
+                                    Bringing a +1?
+                                </label>
+                                <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
+                                    <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">+1's Full Name</label>
+                                    <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Their name">
                                 </div>
-                                <label for="kids">Number of Kids</label>
-                                <input type="number" id="kids" name="kids" min="0" max="10" placeholder="0">
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="kids" style="font-weight: 500;">Number of Kids</label>
+                                <select id="kids" name="kids" style="width: 120px; margin-top: 5px;">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <div id="kids-names-container" style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;">
+                                    <!-- Dynamic kid name inputs injected here by JS -->
+                                </div>
                             </div>
                         </div>
 
