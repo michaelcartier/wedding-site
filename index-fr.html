@@ -338,10 +338,12 @@
                             </div>
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
-                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--clr-text); font-weight: 500;">
-                                    <input type="checkbox" id="plus_one" name="plus_one" value="Yes" style="width: 20px; height: 20px; accent-color: var(--clr-burgundy);">
-                                    Vous venez avec un/une +1 ?
-                                </label>
+                                <label for="plus_one" style="font-weight: 500;">Vous venez avec un/une +1 ?</label>
+                                <select id="plus_one" name="plus_one" style="margin-top: 5px;">
+                                    <option value="" disabled selected>Sélectionnez une option</option>
+                                    <option value="Yes">Oui</option>
+                                    <option value="No">Non</option>
+                                </select>
                                 <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">Nom complet du/de la +1</label>
                                     <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Prénom et nom">
@@ -367,6 +369,7 @@
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="kids" style="font-weight: 500;">Nombre d'enfants</label>
                                 <select id="kids" name="kids" style="width: 120px; margin-top: 5px;">
+                                    <option value="" disabled selected>?</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

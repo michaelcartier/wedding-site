@@ -94,36 +94,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const attending = e.target.value === 'yes';
         guestsGroup.style.display = attending ? 'block' : 'none';
 
-        const requiredWhenAttending = ['entree', 'main'];
+        const requiredWhenAttending = ['entree', 'main', 'plus_one', 'kids'];
         requiredWhenAttending.forEach(id => {
             const el = document.getElementById(id);
             if (el) el.required = attending;
         });
 
         if (!attending) {
-            // Reset the guests group fields
-            const plusOneCheckbox = document.getElementById('plus_one');
-            if (plusOneCheckbox && plusOneCheckbox.checked) {
-                plusOneCheckbox.checked = false;
-                plusOneCheckbox.dispatchEvent(new Event('change'));
+            const plusOneSelect = document.getElementById('plus_one');
+            if (plusOneSelect) {
+                plusOneSelect.value = '';
+                plusOneSelect.dispatchEvent(new Event('change'));
             }
             const kidsSelect = document.getElementById('kids');
             if (kidsSelect) {
-                kidsSelect.value = '0';
+                kidsSelect.value = '';
                 kidsSelect.dispatchEvent(new Event('change'));
             }
         }
     });
 
     // Handle Plus One dynamically
-    const plusOneCheckbox = document.getElementById('plus_one');
+    const plusOneSelect = document.getElementById('plus_one');
     const plusOneNameContainer = document.getElementById('plus-one-name-container');
     const plusOneNameInput = document.getElementById('plus_one_name');
 
-    plusOneCheckbox.addEventListener('change', (e) => {
+    plusOneSelect.addEventListener('change', (e) => {
         const plusOneEntree = document.getElementById('plus_one_entree');
         const plusOneMain = document.getElementById('plus_one_main');
-        if (e.target.checked) {
+        if (e.target.value === 'Yes') {
             plusOneNameContainer.style.display = 'block';
             plusOneNameInput.required = true;
             plusOneEntree.required = true;

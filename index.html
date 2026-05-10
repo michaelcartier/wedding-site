@@ -356,10 +356,12 @@
                             </div>
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
-                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--clr-text); font-weight: 500;">
-                                    <input type="checkbox" id="plus_one" name="plus_one" value="Yes" style="width: 20px; height: 20px; accent-color: var(--clr-burgundy);">
-                                    Bringing a +1?
-                                </label>
+                                <label for="plus_one" style="font-weight: 500;">Bringing a +1?</label>
+                                <select id="plus_one" name="plus_one" style="margin-top: 5px;">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
                                 <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">+1's Full Name</label>
                                     <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Their name">
@@ -385,6 +387,7 @@
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="kids" style="font-weight: 500;">Number of Kids</label>
                                 <select id="kids" name="kids" style="width: 120px; margin-top: 5px;">
+                                    <option value="" disabled selected>?</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
