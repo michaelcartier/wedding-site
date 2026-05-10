@@ -321,6 +321,24 @@
                         <div id="guests-group" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.05);">
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="entree" style="font-weight: 500;">Choix d'entrée</label>
+                                <select id="entree" name="entree" required style="margin-top: 5px;">
+                                    <option value="" disabled selected>Sélectionnez une entrée</option>
+                                    <option value="entree_1">Option 1</option>
+                                    <option value="entree_2">Option 2</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="main" style="font-weight: 500;">Choix de plat principal</label>
+                                <select id="main" name="main" required style="margin-top: 5px;">
+                                    <option value="" disabled selected>Sélectionnez un plat principal</option>
+                                    <option value="main_1">Option 1</option>
+                                    <option value="main_2">Option 2</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--clr-text); font-weight: 500;">
                                     <input type="checkbox" id="plus_one" name="plus_one" value="Yes" style="width: 20px; height: 20px; accent-color: var(--clr-burgundy);">
                                     Vous venez avec un/une +1 ?
@@ -364,28 +382,6 @@
                                 <div id="kids-menu-notice" style="display: none; margin-top: 12px; padding: 10px 14px; background: rgba(114, 47, 55, 0.08); border-radius: 6px; font-size: 0.9rem; color: var(--clr-burgundy); font-weight: 500;">
                                     🍽️ Un menu enfant sera disponible pour vos petits !
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group" style="width: 100%;">
-                                <label for="entree">Choix d'entrée</label>
-                                <select id="entree" name="entree" required>
-                                    <option value="" disabled selected>Sélectionnez une entrée</option>
-                                    <option value="entree_1">Option 1</option>
-                                    <option value="entree_2">Option 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group" style="width: 100%;">
-                                <label for="main">Choix de plat principal</label>
-                                <select id="main" name="main" required>
-                                    <option value="" disabled selected>Sélectionnez un plat principal</option>
-                                    <option value="main_1">Option 1</option>
-                                    <option value="main_2">Option 2</option>
-                                </select>
                             </div>
                         </div>
 
