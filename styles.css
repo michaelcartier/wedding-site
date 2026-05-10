@@ -560,6 +560,10 @@ img {
     background-color: var(--clr-gold);
 }
 
+#story {
+    padding-bottom: var(--space-xl);
+}
+
 /* Timeline/Schedule */
 .timeline {
     position: relative;
