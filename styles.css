@@ -120,15 +120,15 @@ img {
 }
 
 .pt-large {
-    padding-top: var(--space-xl);
+    padding-top: 0;
 }
 
 .pb-large {
-    padding-bottom: var(--space-xl);
+    padding-bottom: 0;
 }
 
 .mt-large {
-    margin-top: var(--space-xl);
+    margin-top: 0;
 }
 
 .relative {
