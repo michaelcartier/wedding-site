@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-password');
     const errorMsg = document.getElementById('password-error');
 
-    // Simple password implementation - 'love' 
-    const correctPassword = 'love';
+    // Simple password implementation
+    const correctPassword = 'damian';
 
     function checkPassword() {
         if (passwordInput.value.toLowerCase() === correctPassword) {
