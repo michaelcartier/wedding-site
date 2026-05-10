@@ -89,12 +89,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const guestsGroup = document.getElementById('guests-group');
     const rsvpSuccess = document.getElementById('rsvp-success');
 
-    // Show/hide guest count based on attendance
+    // Show/hide guest details based on attendance, toggle required fields
     attendanceSelect.addEventListener('change', (e) => {
-        if (e.target.value === 'yes') {
-            guestsGroup.style.display = 'block';
-        } else {
-            guestsGroup.style.display = 'none';
+        const attending = e.target.value === 'yes';
+        guestsGroup.style.display = attending ? 'block' : 'none';
+
+        const requiredWhenAttending = ['entree', 'main'];
+        requiredWhenAttending.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.required = attending;
+        });
+
+        if (!attending) {
+            // Reset the guests group fields
+            const plusOneCheckbox = document.getElementById('plus_one');
+            if (plusOneCheckbox && plusOneCheckbox.checked) {
+                plusOneCheckbox.checked = false;
+                plusOneCheckbox.dispatchEvent(new Event('change'));
+            }
+            const kidsSelect = document.getElementById('kids');
+            if (kidsSelect) {
+                kidsSelect.value = '0';
+                kidsSelect.dispatchEvent(new Event('change'));
+            }
         }
     });
 
