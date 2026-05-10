@@ -544,7 +544,7 @@ img {
 /* Section Titles */
 .section-title {
     font-size: 3rem;
-    margin-bottom: calc(var(--space-xl) * 1.5);
+    margin-bottom: var(--space-lg);
     position: relative;
     display: inline-block;
 }
