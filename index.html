@@ -320,13 +320,13 @@
                     <form id="rsvp-form" class="rsvp-form" action="https://formspree.io/f/xjgpydjo" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name(s)</label>
-                            <input type="text" id="name" name="name" required placeholder="Who is attending?">
+                            <input type="text" id="name" name="01 - Name" required placeholder="Who is attending?">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group" style="width: 100%;">
                                 <label for="attendance">Will you attend?</label>
-                                <select id="attendance" name="attendance" required>
+                                <select id="attendance" name="02 - Attendance" required>
                                     <option value="" disabled selected>Select an option</option>
                                     <option value="yes">Joyfully Accept</option>
                                     <option value="no">Regretfully Decline</option>
@@ -339,7 +339,7 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="entree" style="font-weight: 500;">Entrée Choice</label>
-                                <select id="entree" name="Entrée Choice" style="margin-top: 5px;">
+                                <select id="entree" name="03 - Entrée" style="margin-top: 5px;">
                                     <option value="" disabled selected>Select an entrée</option>
                                     <option value="entree_1">Option 1</option>
                                     <option value="entree_2">Option 2</option>
@@ -348,7 +348,7 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="main" style="font-weight: 500;">Main Dish Choice</label>
-                                <select id="main" name="Main Dish" style="margin-top: 5px;">
+                                <select id="main" name="04 - Main Dish" style="margin-top: 5px;">
                                     <option value="" disabled selected>Select a main dish</option>
                                     <option value="main_1">Option 1</option>
                                     <option value="main_2">Option 2</option>
@@ -357,17 +357,17 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="plus_one" style="font-weight: 500;">Bringing a +1?</label>
-                                <select id="plus_one" name="plus_one" style="margin-top: 5px;">
+                                <select id="plus_one" name="05 - +1?" style="margin-top: 5px;">
                                     <option value="" disabled selected>Select an option</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
                                 <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">+1's Full Name</label>
-                                    <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Their name">
+                                    <input type="text" id="plus_one_name" name="06 - +1 Name" placeholder="Their name">
                                     <div style="margin-top: 15px;">
                                         <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Entrée Choice</label>
-                                        <select id="plus_one_entree" name="+1 Entrée" style="margin-top: 5px;">
+                                        <select id="plus_one_entree" name="07 - +1 Entrée" style="margin-top: 5px;">
                                             <option value="" disabled selected>Select an entrée</option>
                                             <option value="entree_1">Option 1</option>
                                             <option value="entree_2">Option 2</option>
@@ -375,7 +375,7 @@
                                     </div>
                                     <div style="margin-top: 15px;">
                                         <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Main Dish Choice</label>
-                                        <select id="plus_one_main" name="+1 Main Dish" style="margin-top: 5px;">
+                                        <select id="plus_one_main" name="08 - +1 Main Dish" style="margin-top: 5px;">
                                             <option value="" disabled selected>Select a main dish</option>
                                             <option value="main_1">Option 1</option>
                                             <option value="main_2">Option 2</option>
@@ -386,7 +386,7 @@
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="kids" style="font-weight: 500;">Number of Kids</label>
-                                <select id="kids" name="kids" style="width: 120px; margin-top: 5px;">
+                                <select id="kids" name="09 - Kids" style="width: 120px; margin-top: 5px;">
                                     <option value="" disabled selected>?</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -407,20 +407,20 @@
 
                         <div class="form-group">
                             <label for="dietary">Dietary Restrictions</label>
-                            <textarea id="dietary" name="dietary" rows="2"
+                            <textarea id="dietary" name="11 - Dietary Restrictions" rows="2"
                                 placeholder="Let us know if you or your guests have any allergies..."></textarea>
                         </div>
 
                         <div class="form-group song-request">
                             <label for="song">Song Request 🎵</label>
                             <p class="form-hint">Help us build our party playlist!</p>
-                            <input type="text" id="song" name="song" placeholder="Track Name - Artist">
+                            <input type="text" id="song" name="12 - Song Request" placeholder="Track Name - Artist">
                         </div>
 
                         <div class="form-group">
                             <label for="comment">Questions or Comments 💬</label>
                             <p class="form-hint">Got a question, or just want to share something with us? We'd love to hear it!</p>
-                            <textarea id="comment" name="comment" rows="3" placeholder="Write your message here..."></textarea>
+                            <textarea id="comment" name="13 - Comment" rows="3" placeholder="Write your message here..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-full glow-effect">Send RSVP</button>

@@ -302,13 +302,13 @@
                     <form id="rsvp-form" class="rsvp-form" action="https://formspree.io/f/xjgpydjo" method="POST">
                         <div class="form-group">
                             <label for="name">Nom(s) complet(s)</label>
-                            <input type="text" id="name" name="name" required placeholder="Qui sera présent ?">
+                            <input type="text" id="name" name="01 - Name" required placeholder="Qui sera présent ?">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group" style="width: 100%;">
                                 <label for="attendance">Serez-vous présent ?</label>
-                                <select id="attendance" name="attendance" required>
+                                <select id="attendance" name="02 - Attendance" required>
                                     <option value="" disabled selected>Sélectionnez une option</option>
                                     <option value="yes">J'accepte avec joie</option>
                                     <option value="no">Je décline à regret</option>
@@ -321,7 +321,7 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="entree" style="font-weight: 500;">Choix d'entrée</label>
-                                <select id="entree" name="Entrée Choice" style="margin-top: 5px;">
+                                <select id="entree" name="03 - Entrée" style="margin-top: 5px;">
                                     <option value="" disabled selected>Sélectionnez une entrée</option>
                                     <option value="entree_1">Option 1</option>
                                     <option value="entree_2">Option 2</option>
@@ -330,7 +330,7 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="main" style="font-weight: 500;">Choix de plat principal</label>
-                                <select id="main" name="Main Dish" style="margin-top: 5px;">
+                                <select id="main" name="04 - Main Dish" style="margin-top: 5px;">
                                     <option value="" disabled selected>Sélectionnez un plat principal</option>
                                     <option value="main_1">Option 1</option>
                                     <option value="main_2">Option 2</option>
@@ -339,17 +339,17 @@
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
                                 <label for="plus_one" style="font-weight: 500;">Vous venez avec un/une +1 ?</label>
-                                <select id="plus_one" name="plus_one" style="margin-top: 5px;">
+                                <select id="plus_one" name="05 - +1?" style="margin-top: 5px;">
                                     <option value="" disabled selected>Sélectionnez une option</option>
                                     <option value="Yes">Oui</option>
                                     <option value="No">Non</option>
                                 </select>
                                 <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">Nom complet du/de la +1</label>
-                                    <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Prénom et nom">
+                                    <input type="text" id="plus_one_name" name="06 - +1 Name" placeholder="Prénom et nom">
                                     <div style="margin-top: 15px;">
                                         <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix d'entrée du/de la +1</label>
-                                        <select id="plus_one_entree" name="+1 Entrée" style="margin-top: 5px;">
+                                        <select id="plus_one_entree" name="07 - +1 Entrée" style="margin-top: 5px;">
                                             <option value="" disabled selected>Sélectionnez une entrée</option>
                                             <option value="entree_1">Option 1</option>
                                             <option value="entree_2">Option 2</option>
@@ -357,7 +357,7 @@
                                     </div>
                                     <div style="margin-top: 15px;">
                                         <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix de plat principal du/de la +1</label>
-                                        <select id="plus_one_main" name="+1 Main Dish" style="margin-top: 5px;">
+                                        <select id="plus_one_main" name="08 - +1 Main Dish" style="margin-top: 5px;">
                                             <option value="" disabled selected>Sélectionnez un plat principal</option>
                                             <option value="main_1">Option 1</option>
                                             <option value="main_2">Option 2</option>
@@ -368,7 +368,7 @@
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="kids" style="font-weight: 500;">Nombre d'enfants</label>
-                                <select id="kids" name="kids" style="width: 120px; margin-top: 5px;">
+                                <select id="kids" name="09 - Kids" style="width: 120px; margin-top: 5px;">
                                     <option value="" disabled selected>?</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -389,20 +389,20 @@
 
                         <div class="form-group">
                             <label for="dietary">Restrictions alimentaires</label>
-                            <textarea id="dietary" name="dietary" rows="2"
+                            <textarea id="dietary" name="11 - Dietary Restrictions" rows="2"
                                 placeholder="Faites-nous savoir si vous ou vos invités avez des allergies ou des restrictions alimentaires..."></textarea>
                         </div>
 
                         <div class="form-group song-request">
                             <label for="song">Demande de chanson 🎵</label>
                             <p class="form-hint">Aidez-nous à construire notre playlist de soirée !</p>
-                            <input type="text" id="song" name="song" placeholder="Nom de la chanson - Artiste">
+                            <input type="text" id="song" name="12 - Song Request" placeholder="Nom de la chanson - Artiste">
                         </div>
 
                         <div class="form-group">
                             <label for="comment">Questions ou commentaires 💬</label>
                             <p class="form-hint">Une question, ou simplement envie de nous partager quelque chose ? On est tout ouïe !</p>
-                            <textarea id="comment" name="comment" rows="3" placeholder="Écrivez votre message ici..."></textarea>
+                            <textarea id="comment" name="13 - Comment" rows="3" placeholder="Écrivez votre message ici..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-full glow-effect">Envoyer le RSVP</button>

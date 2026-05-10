@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             kidGroup.style.marginBottom = '5px';
             kidGroup.innerHTML = `
                 <label for="kid_name_${i}" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Kid ${i}'s Name</label>
-                <input type="text" id="kid_name_${i}" name="kid_name_${i}" placeholder="Kid ${i}'s name" required style="width: 100%;">
+                <input type="text" id="kid_name_${i}" name="10 - Kid ${i} Name" placeholder="Kid ${i}'s name" required style="width: 100%;">
             `;
             kidsNamesContainer.appendChild(kidGroup);
         }
