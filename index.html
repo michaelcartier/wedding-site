@@ -346,6 +346,22 @@
                                 <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">+1's Full Name</label>
                                     <input type="text" id="plus_one_name" name="plus_one_name" placeholder="Their name">
+                                    <div style="margin-top: 15px;">
+                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Entrée Choice</label>
+                                        <select id="plus_one_entree" name="plus_one_entree" style="margin-top: 5px;">
+                                            <option value="" disabled selected>Select an entrée</option>
+                                            <option value="entree_1">Option 1</option>
+                                            <option value="entree_2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div style="margin-top: 15px;">
+                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Main Dish Choice</label>
+                                        <select id="plus_one_main" name="plus_one_main" style="margin-top: 5px;">
+                                            <option value="" disabled selected>Select a main dish</option>
+                                            <option value="main_1">Option 1</option>
+                                            <option value="main_2">Option 2</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -362,6 +378,9 @@
                                 </select>
                                 <div id="kids-names-container" style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;">
                                     <!-- Dynamic kid name inputs injected here by JS -->
+                                </div>
+                                <div id="kids-menu-notice" style="display: none; margin-top: 12px; padding: 10px 14px; background: rgba(114, 47, 55, 0.08); border-radius: 6px; font-size: 0.9rem; color: var(--clr-burgundy); font-weight: 500;">
+                                    🍽️ A kids menu will be available for your little ones!
                                 </div>
                             </div>
                         </div>

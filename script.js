@@ -104,13 +104,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const plusOneNameInput = document.getElementById('plus_one_name');
 
     plusOneCheckbox.addEventListener('change', (e) => {
+        const plusOneEntree = document.getElementById('plus_one_entree');
+        const plusOneMain = document.getElementById('plus_one_main');
         if (e.target.checked) {
             plusOneNameContainer.style.display = 'block';
             plusOneNameInput.required = true;
+            plusOneEntree.required = true;
+            plusOneMain.required = true;
         } else {
             plusOneNameContainer.style.display = 'none';
             plusOneNameInput.required = false;
             plusOneNameInput.value = '';
+            plusOneEntree.required = false;
+            plusOneEntree.value = '';
+            plusOneMain.required = false;
+            plusOneMain.value = '';
         }
     });
 
@@ -118,10 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const kidsSelect = document.getElementById('kids');
     const kidsNamesContainer = document.getElementById('kids-names-container');
 
+    const kidsMenuNotice = document.getElementById('kids-menu-notice');
+
     kidsSelect.addEventListener('change', (e) => {
         const numKids = parseInt(e.target.value) || 0;
-        kidsNamesContainer.innerHTML = ''; // Clear existing inputs
-        
+        kidsNamesContainer.innerHTML = '';
+        kidsMenuNotice.style.display = numKids > 0 ? 'block' : 'none';
+
         for (let i = 1; i <= numKids; i++) {
             const kidGroup = document.createElement('div');
             kidGroup.style.marginBottom = '5px';
