@@ -544,7 +544,7 @@ img {
 /* Section Titles */
 .section-title {
     font-size: 3rem;
-    margin-bottom: var(--space-lg);
+    margin-bottom: 2.5rem;
     position: relative;
     display: inline-block;
 }
@@ -663,6 +663,7 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
     align-items: center;
+    padding-top: 2rem;
 }
 
 .story-image-container {
