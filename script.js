@@ -10,13 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Simple password implementation
     const correctPassword = 'damian';
 
+    if (sessionStorage.getItem('unlocked')) {
+        passwordOverlay.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
+
     function checkPassword() {
         if (passwordInput.value.toLowerCase() === correctPassword) {
+            sessionStorage.setItem('unlocked', '1');
             passwordOverlay.style.opacity = '0';
             setTimeout(() => {
                 passwordOverlay.style.display = 'none';
                 mainContent.style.display = 'block';
-                // Trigger reflow to ensure styles apply correctly after display:none
                 window.dispatchEvent(new Event('resize'));
             }, 500);
         } else {
