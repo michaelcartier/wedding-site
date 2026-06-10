@@ -1105,10 +1105,12 @@ img {
     .timeline-time {
         position: relative;
         display: inline-block;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         transform: none !important;
         left: 0 !important;
         right: auto !important;
+        font-size: 1rem;
+        padding: 0.15rem 0.6rem;
     }
 
     .timeline-marker {
