@@ -1174,9 +1174,11 @@ img {
         background: rgba(250, 246, 240, 0.95);
     }
 
-    .logo-mk,
-    .hamburger .bar {
+    .logo-mk {
         color: var(--clr-burgundy);
+    }
+
+    .hamburger .bar {
         background-color: var(--clr-burgundy);
     }
 
