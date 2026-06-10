@@ -330,7 +330,7 @@
                             </div>
                         </div>
 
-                        <!-- Guest details (shown only if attending) -->
+                        <!-- Guest food choices (shown only if attending) -->
                         <div id="guests-group" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.05);">
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
@@ -342,7 +342,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <div class="form-group" style="margin-bottom: 0;">
                                 <label for="main" style="font-weight: 500;">Main Dish Choice</label>
                                 <select id="main" name="04 - Main Dish" style="margin-top: 5px; width: 100%;">
                                     <option value="" disabled selected>Select a main dish</option>
@@ -350,8 +350,12 @@
                                     <option value="main_2">Pavé de saumon, céleri-rave, pommes de terre rattes, salade de fenouil, sauce beurre blanc</option>
                                 </select>
                             </div>
+                        </div>
 
-                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <!-- Second guest & kids (shown only if attending) -->
+                        <div id="guests-extra-group" style="display: none; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                            <div class="form-group">
                                 <label for="plus_one" style="font-weight: 500;">Coming with a second guest?</label>
                                 <select id="plus_one" name="05 - +1?" style="margin-top: 5px; width: 100%;">
                                     <option value="" disabled selected>Select an option</option>
@@ -362,7 +366,7 @@
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">Second guest name</label>
                                     <input type="text" id="plus_one_name" name="06 - +1 Name" placeholder="Their name">
                                     <div style="margin-top: 15px;">
-                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Entrée Choice</label>
+                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Second guest's Entrée Choice</label>
                                         <select id="plus_one_entree" name="07 - +1 Entrée" style="margin-top: 5px; width: 100%;">
                                             <option value="" disabled selected>Select an entrée</option>
                                             <option value="entree_1">Carpaccio de melon, speck, basilic, vinaigrette au balsamique blanc</option>
@@ -370,7 +374,7 @@
                                         </select>
                                     </div>
                                     <div style="margin-top: 15px;">
-                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">+1's Main Dish Choice</label>
+                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Second guest's Main Dish Choice</label>
                                         <select id="plus_one_main" name="08 - +1 Main Dish" style="margin-top: 5px; width: 100%;">
                                             <option value="" disabled selected>Select a main dish</option>
                                             <option value="main_1">Volaille de la ferme des voltigeurs, purée de pomme de terre aux herbes, haricots fins, lardons, jus de viande</option>
@@ -380,7 +384,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group" style="margin-bottom: 0;">
+                            <div class="form-group">
                                 <label for="kids" style="font-weight: 500;">Number of Kids</label>
                                 <select id="kids" name="09 - Kids" style="width: 120px; margin-top: 5px;">
                                     <option value="" disabled selected>?</option>
