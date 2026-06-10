@@ -311,7 +311,7 @@
                             </div>
                         </div>
 
-                        <!-- Guest details (shown only if attending) -->
+                        <!-- Choix repas (shown only if attending) -->
                         <div id="guests-group" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.05);">
 
                             <div class="form-group" style="margin-bottom: 1.5rem;">
@@ -323,7 +323,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <div class="form-group" style="margin-bottom: 0;">
                                 <label for="main" style="font-weight: 500;">Choix de plat principal</label>
                                 <select id="main" name="04 - Main Dish" style="margin-top: 5px; width: 100%;">
                                     <option value="" disabled selected>Sélectionnez un plat principal</option>
@@ -331,8 +331,12 @@
                                     <option value="main_2">Pavé de saumon, céleri-rave, pommes de terre rattes, salade de fenouil, sauce beurre blanc</option>
                                 </select>
                             </div>
+                        </div>
 
-                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <!-- Deuxième invité & enfants (shown only if attending) -->
+                        <div id="guests-extra-group" style="display: none; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                            <div class="form-group">
                                 <label for="plus_one" style="font-weight: 500;">Vous venez avec un deuxième invité ?</label>
                                 <select id="plus_one" name="05 - +1?" style="margin-top: 5px; width: 100%;">
                                     <option value="" disabled selected>Sélectionnez une option</option>
@@ -343,7 +347,7 @@
                                     <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">Nom du deuxième invité</label>
                                     <input type="text" id="plus_one_name" name="06 - +1 Name" placeholder="Prénom et nom">
                                     <div style="margin-top: 15px;">
-                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix d'entrée du/de la +1</label>
+                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix d'entrée du deuxième invité</label>
                                         <select id="plus_one_entree" name="07 - +1 Entrée" style="margin-top: 5px; width: 100%;">
                                             <option value="" disabled selected>Sélectionnez une entrée</option>
                                             <option value="entree_1">Carpaccio de melon, speck, basilic, vinaigrette au balsamique blanc</option>
@@ -351,7 +355,7 @@
                                         </select>
                                     </div>
                                     <div style="margin-top: 15px;">
-                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix de plat principal du/de la +1</label>
+                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Choix de plat principal du deuxième invité</label>
                                         <select id="plus_one_main" name="08 - +1 Main Dish" style="margin-top: 5px; width: 100%;">
                                             <option value="" disabled selected>Sélectionnez un plat principal</option>
                                             <option value="main_1">Volaille de la ferme des voltigeurs, purée de pomme de terre aux herbes, haricots fins, lardons, jus de viande</option>
@@ -361,7 +365,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group" style="margin-bottom: 0;">
+                            <div class="form-group">
                                 <label for="kids" style="font-weight: 500;">Nombre d'enfants</label>
                                 <select id="kids" name="09 - Kids" style="width: 120px; margin-top: 5px;">
                                     <option value="" disabled selected>?</option>
@@ -374,7 +378,7 @@
                                     <option value="6">6</option>
                                 </select>
                                 <div id="kids-names-container" style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;">
-                                    <!-- Les champs enfants sont générés dynamiquement par JS -->
+                                    <!-- Dynamic kid name inputs injected here by JS -->
                                 </div>
                                 <div id="kids-menu-notice" style="display: none; margin-top: 12px; padding: 10px 14px; background: rgba(114, 47, 55, 0.08); border-radius: 6px; font-size: 0.9rem; color: var(--clr-burgundy); font-weight: 500;">
                                     🍽️ Un menu enfant sera disponible pour vos petits !
