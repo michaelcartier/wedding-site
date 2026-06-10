@@ -977,6 +977,7 @@ img {
     max-width: 800px;
     margin: 0 auto;
     color: var(--clr-dark);
+    overflow-x: hidden;
 }
 
 .rsvp-deadline {
