@@ -284,3 +284,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+function addSecondSong() {
+    var c = document.getElementById('song2-container');
+    var btn = document.getElementById('add-song-btn');
+    if (c) c.style.display = 'flex';
+    if (btn) btn.style.display = 'none';
+}
+
+function removeSecondSong() {
+    var c = document.getElementById('song2-container');
+    var inp = document.getElementById('song2');
+    var btn = document.getElementById('add-song-btn');
+    if (c) c.style.display = 'none';
+    if (inp) inp.value = '';
+    if (btn) btn.style.display = 'inline-flex';
+}
