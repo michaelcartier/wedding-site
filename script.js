@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- RSVP Form Handling ---
     const rsvpForm = document.getElementById('rsvp-form');
     const attendanceSelect = document.getElementById('attendance');
+    const guestsExtraGroup = document.getElementById('guests-extra-group');
     const guestsGroup = document.getElementById('guests-group');
     const rsvpSuccess = document.getElementById('rsvp-success');
 
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     attendanceSelect.addEventListener('change', (e) => {
         const attending = e.target.value === 'yes';
         guestsGroup.style.display = attending ? 'block' : 'none';
+        if (guestsExtraGroup) guestsExtraGroup.style.display = attending ? 'flex' : 'none';
 
         const requiredWhenAttending = ['entree', 'main', 'plus_one', 'kids'];
         requiredWhenAttending.forEach(id => {
