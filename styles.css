@@ -1046,13 +1046,10 @@ img {
 }
 
 .song-request input {
-    border-bottom: 2px solid var(--clr-gold);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
-    background: transparent;
-    padding: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: var(--clr-cream);
+    padding: 1rem;
 }
 
 .rsvp-success {
