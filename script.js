@@ -303,15 +303,16 @@ function removeSecondSong() {
     if (btn) btn.style.display = 'inline-flex';
 }
 
-// Pikachu Easter egg — triple-click the footer logo
+// Pikachu Easter egg — triple-click (desktop) or single tap (mobile) the footer logo
 (function () {
     var clicks = 0, timer = null;
+    var isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
     document.addEventListener('mousedown', function (e) {
         if (!e.target.closest('.footer-logo')) return;
         e.preventDefault();
         clicks++;
         clearTimeout(timer);
-        if (clicks >= 3) {
+        if (clicks >= (isMobile ? 1 : 3)) {
             clicks = 0;
             showPikachu();
             return;
