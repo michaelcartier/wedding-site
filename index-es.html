@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina & Michael - Nos Casamos</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Alex+Brush&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Protection Overlay -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-box">
+            <h2 class="password-title">Bienvenido</h2>
+            <p class="password-text">Por favor ingresa la contraseña para ver los detalles de nuestra boda.</p>
+            <div class="password-input-group">
+                <input type="password" id="site-password" placeholder="Contraseña"
+                    aria-label="Contraseña del sitio">
+                <button id="submit-password" class="btn btn-primary">Entrar</button>
+            </div>
+            <p id="password-error" class="password-error">Contraseña incorrecta. Por favor intenta de nuevo.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">
+                    <div class="logo-mk">
+                        <span class="m">M</span><span class="k">K</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#schedule">Programa</a></li>
+                    <li><a href="#story">Historia</a></li>
+                    <li><a href="#travel">Viaje</a></li>
+                    <li><a href="#details">Detalles</a></li>
+                    <li><a href="#rsvp" class="nav-btn">Confirmación</a></li>
+                    <li><a href="index.html" class="lang-switch">EN</a></li>
+                    <li><a href="index-fr.html" class="lang-switch">FR</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h3 class="pre-title">Únete a nosotros para celebrar nuestra boda</h3>
+                <h1 class="couple-names">Karina <span class="ampersand">&</span> Michaël</h1>
+                <div class="hero-details">
+                    <p class="date">Sábado, 19 de septiembre de 2026</p>
+                    <p class="venue">Auberge Saint-Gabriel</p>
+                    <p class="address">426 Rue St Gabriel, Montréal, QC H2Y 2Z9</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#rsvp" class="btn btn-primary btn-large glow-effect">Confirmez votre présence</a>
+                </div>
+            </div>
+            <a href="#schedule" class="scroll-down">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </header>
+
+        <!-- Event Schedule Section -->
+        <section id="schedule" class="section bg-light">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">El Gran Día</h2>
+                <p class="text-center" style="margin-bottom: 2rem; font-style: italic; opacity: 0.7;">Los horarios son indicativos y pueden cambiar durante el día.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">3:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Llegada</h3>
+                            <p>Por favor planea llegar al salón alrededor de las 3:00 PM para que podamos comenzar a tiempo.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">3:30 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Ceremonia</h3>
+                            <p>El evento principal. Sé testigo de nuestros votos y el inicio de nuestro nuevo capítulo juntos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">4:30 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Hora de Cócteles</h3>
+                            <p>¡Disfruta de bocadillos y cócteles mientras celebramos juntos!</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">6:30 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Cena</h3>
+                            <p>Una hermosa experiencia gastronómica en el gran salón.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">9:00 PM</div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Fiesta</h3>
+                            <p>¡Es hora de bailar! Trae tus mejores pasos y celebra toda la noche.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="section bg-dark text-light pt-large pb-large relative overflow-hidden">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+
+            <div class="container relative z-10">
+                <div class="story-grid">
+                    <div class="story-image-container">
+                        <div class="image-frame slideshow-container">
+                            <div class="slides">
+                                <img src="proposal.jpg" alt="La propuesta" class="story-image slide active">
+                                <img src="Picture1.jpg" alt="Nuestros recuerdos - 1" class="story-image slide">
+                                <img src="Picture2.jpg" alt="Nuestros recuerdos - 2" class="story-image slide">
+                                <img src="Picture3.jpg" alt="Nuestros recuerdos - 3" class="story-image slide">
+                                <img src="Picture4.jpg" alt="Nuestros recuerdos - 4" class="story-image slide">
+                                <img src="Picture5.jpg" alt="Nuestros recuerdos - 5" class="story-image slide">
+                            </div>
+                            <button class="slide-nav prev" aria-label="Imagen anterior">&#10094;</button>
+                            <button class="slide-nav next" aria-label="Siguiente imagen">&#10095;</button>
+                            <div class="slide-dots">
+                                <span class="dot active" data-index="0"></span>
+                                <span class="dot" data-index="1"></span>
+                                <span class="dot" data-index="2"></span>
+                                <span class="dot" data-index="3"></span>
+                                <span class="dot" data-index="4"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <h2 class="section-title text-light">Nuestra Historia</h2>
+
+                        <div class="story-card">
+                            <h3 class="story-subtitle">Cómo Nos Conocimos</h3>
+                            <p>Todo comenzó de manera completamente inesperada en el trabajo. Mientras nos encontrábamos inmersos en la rutina diaria, terminamos tomando unas cervezas después del trabajo, compartiendo historias y dándonos cuenta de que había una conexión que iba mucho más allá de la oficina.</p>
+                            <p>Resulta que el universo llevaba mucho tiempo tratando de presentarnos. Aunque finalmente nos conocimos en Montreal, más tarde descubrimos un giro oculto en nuestros caminos: años antes, Karina había vivido en el mismo pueblo de Francia donde Michaël creció. En un clásico encuentro perdido, él se había ido justo cuando ella llegaba a pasar un año allí.</p>
+                            <p>Quizás nos perdimos al otro lado del océano en aquel entonces, pero estamos muy felices de habernos encontrado aquí en casa.</p>
+                        </div>
+
+                        <div class="story-card">
+                            <h3 class="story-subtitle">La Propuesta</h3>
+                            <p>Durante un viaje a México, Michaël nos llevó en una larga caminata hacia el mar. Karina no tenía idea de adónde iban, y nuestro hijo, que apenas tenía dos años, estaba felizmente ajeno al gran momento que se aproximaba.</p>
+                            <p>Cuando llegamos a un lugar con vista al mar azul cristalino, Michaël se arrodilló. Fue tan completamente inesperado que la primera reacción de Karina no fue sorpresa… sino risa. Por un instante, ella honestamente pensó que podría estar bromeando. Fue un momento de alegría pura y desbordante que nos representaba perfectamente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wedding-party mt-large" style="display:none">
+                    <h2 class="section-title text-center text-light">El Cortejo</h2>
+                    <div class="party-grid">
+                        <div class="party-member">
+                            <div class="member-role">Mamá de Karina</div>
+                            <p class="member-desc">La mujer que me crió con una fortaleza que llevo conmigo cada día; sin importar la distancia, sigue siendo el corazón de lo que soy.</p>
+                        </div>
+                        <div class="party-member">
+                            <div class="member-role">Mamá de Michaël</div>
+                            <p class="member-desc">El pilar de la familia, siempre presente con apoyo y amor infinitos.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Julian</h4>
+                            <div class="member-role">Oficiante</div>
+                            <p class="member-desc">Un querido amigo que conoce nuestra historia mejor que nadie, honrándonos al dirigir nuestra ceremonia.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Benjamin</h4>
+                            <div class="member-role">Padrino</div>
+                            <p class="member-desc">Siempre trayendo las risas y los mejores consejos.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Carlos</h4>
+                            <div class="member-role">Chambelán</div>
+                            <p class="member-desc">Mejores amigos desde la preparatoria y la universidad. Carlos ha sido mi persona de confianza desde que me dejaba monopolizar su tele para ver Dawson's Creek.</p>
+                        </div>
+                        <div class="party-member">
+                            <h4 class="member-name">Diana</h4>
+                            <div class="member-role">Dama de honor</div>
+                            <p class="member-desc">Amigas desde la universidad. Diana es una gran fotógrafa y la amiga más genial a la que siempre he aspirado, siempre lista para una aventura y una nueva perspectiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel & Accommodations Section -->
+        <section id="travel" class="section bg-light relative overflow-hidden">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">Viaje y Hospedaje</h2>
+                <div class="travel-grid mt-large">
+
+                    <div class="travel-card">
+                        <div class="travel-icon">✈️</div>
+                        <h3 class="travel-subtitle">Vuelos y Llegada</h3>
+                        <p>Recomendamos volar al <strong>Aeropuerto Internacional Montréal-Trudeau (YUL)</strong>. Para darte tiempo de instalarte antes de la gran celebración del sábado, considera llegar el jueves o viernes. Nota: la mayoría de los visitantes internacionales necesitarán una <a
+                                href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html"
+                                target="_blank"
+                                style="color: var(--clr-burgundy); text-decoration: underline; font-weight: 500;">Autorización de Viaje Electrónica (AVE)</a> para entrar a Canadá.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🚕</div>
+                        <h3 class="travel-subtitle">Desde el Aeropuerto</h3>
+                        <p>Actualmente no hay tren REM desde el aeropuerto. <strong>Uber</strong> es la opción más fácil (aprox. $40 al centro). Alternativamente, el autobús 747 funciona bien y es una opción de transporte público más económica.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🚇</div>
+                        <h3 class="travel-subtitle">Moverse por la Ciudad</h3>
+                        <p>Montreal es muy caminable, pero la mejor manera de moverse es el sistema de <strong>Metro STM</strong>. Puedes comprar un <a href="https://www.stm.info/en/info/fares/transit-fares/weekly-pass"
+                                target="_blank"
+                                style="color: var(--clr-burgundy); text-decoration: underline; font-weight: 500;">Pase Semanal</a> o un pase de 3 días en cualquier estación de metro para viajes ilimitados.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🍂</div>
+                        <h3 class="travel-subtitle">Clima en Septiembre</h3>
+                        <p>¡Septiembre en Montreal es un hermoso mes de transición! Los días suelen ser cálidos y soleados, pero las noches pueden ser bastante frescas. Recomendamos llevar capas ligeras para la noche.</p>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="travel-icon">🏛️</div>
+                        <h3 class="travel-subtitle">El Centro y el Viejo Puerto</h3>
+                        <p>Nuestro lugar, el Auberge Saint-Gabriel, está ubicado en el corazón del histórico <strong>Viejo Puerto</strong>. Tómate un tiempo para pasear por las hermosas calles empedradas, disfrutar de las vistas al río, entrar en los increíbles cafés locales y admirar la arquitectura europea que hace a Montreal tan especial.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Details & FAQs Section -->
+        <section id="details" class="section bg-light border-top-subtle">
+            <div class="container relative z-10">
+                <h2 class="section-title text-center text-burgundy">Detalles y Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-card">
+                        <div class="faq-icon">👗</div>
+                        <h3>Código de Vestimenta</h3>
+                        <p><strong>Vestimenta Formal.</strong> ¡Por favor viste con tu mejor atuendo formal! No hay requisitos de color específicos ni temática, así que siéntete libre de usar lo que te haga sentir fabuloso/a.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Acompañantes e Hijos</h3>
+                        <p><strong>¡Bienvenidos!</strong> Queremos que todos nuestros seres queridos estén presentes. Los acompañantes y los niños son más que bienvenidos a unirse a la celebración.</p>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-icon">🎁</div>
+                        <h3>Lista de Regalos</h3>
+                        <p><strong>Tu presencia es nuestro regalo.</strong> No tenemos lista de bodas. ¡Estamos tan increíblemente felices de que vengas a celebrar con nosotros!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section bg-burgundy text-light rsvp-section">
+            <div class="container relative z-10">
+                <div class="rsvp-container shadow-xl">
+                    <div class="rsvp-header text-center">
+                        <h2 class="section-title text-burgundy">Confirmación de asistencia</h2>
+                    </div>
+
+                    <form id="rsvp-form" class="rsvp-form" action="https://formspree.io/f/xjgpydjo" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre del primer invitado</label>
+                            <input type="text" id="name" name="01 - Name" required placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group" style="width: 100%;">
+                                <label for="attendance">¿Asistirás?</label>
+                                <select id="attendance" name="02 - Attendance" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="yes">Acepto con gusto</option>
+                                    <option value="no">Declino con pesar</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Guest food choices (shown only if attending) -->
+                        <div id="guests-group" style="display: none; margin-bottom: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.05);">
+
+                            <div class="form-group" style="margin-bottom: 1.5rem;">
+                                <label for="entree" style="font-weight: 500;">Elección de Entrada</label>
+                                <select id="entree" name="03 - Entrée" style="margin-top: 5px; width: 100%;">
+                                    <option value="" disabled selected>Selecciona una entrada</option>
+                                    <option value="entree_1">Carpaccio de melon, speck, basilic, vinaigrette au balsamique blanc</option>
+                                    <option value="entree_2">Burrata, pesto de brocoli, courgette, citron, noix de pin rôties</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="main" style="font-weight: 500;">Elección de Plato Principal</label>
+                                <select id="main" name="04 - Main Dish" style="margin-top: 5px; width: 100%;">
+                                    <option value="" disabled selected>Selecciona un plato principal</option>
+                                    <option value="main_1">Volaille de la ferme des voltigeurs, purée de pomme de terre aux herbes, haricots fins, lardons, jus de viande</option>
+                                    <option value="main_2">Pavé de saumon, céleri-rave, pommes de terre rattes, salade de fenouil, sauce beurre blanc</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Second guest & kids (shown only if attending) -->
+                        <div id="guests-extra-group" style="display: none; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                            <div class="form-group">
+                                <label for="plus_one" style="font-weight: 500;">¿Vienes con un segundo invitado?</label>
+                                <select id="plus_one" name="05 - +1?" style="margin-top: 5px; width: 100%;">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Yes">Sí</option>
+                                    <option value="No">No</option>
+                                </select>
+                                <div id="plus-one-name-container" style="display: none; margin-top: 15px;">
+                                    <label for="plus_one_name" style="font-size: 0.9rem; margin-bottom: 5px;">Nombre del segundo invitado</label>
+                                    <input type="text" id="plus_one_name" name="06 - +1 Name" placeholder="Su nombre">
+                                    <div style="margin-top: 15px;">
+                                        <label for="plus_one_entree" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Elección de entrada del segundo invitado</label>
+                                        <select id="plus_one_entree" name="07 - +1 Entrée" style="margin-top: 5px; width: 100%;">
+                                            <option value="" disabled selected>Selecciona una entrada</option>
+                                            <option value="entree_1">Carpaccio de melon, speck, basilic, vinaigrette au balsamique blanc</option>
+                                            <option value="entree_2">Burrata, pesto de brocoli, courgette, citron, noix de pin rôties</option>
+                                        </select>
+                                    </div>
+                                    <div style="margin-top: 15px;">
+                                        <label for="plus_one_main" style="font-size: 0.9rem; margin-bottom: 5px; display: block;">Elección de plato principal del segundo invitado</label>
+                                        <select id="plus_one_main" name="08 - +1 Main Dish" style="margin-top: 5px; width: 100%;">
+                                            <option value="" disabled selected>Selecciona un plato principal</option>
+                                            <option value="main_1">Volaille de la ferme des voltigeurs, purée de pomme de terre aux herbes, haricots fins, lardons, jus de viande</option>
+                                            <option value="main_2">Pavé de saumon, céleri-rave, pommes de terre rattes, salade de fenouil, sauce beurre blanc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="kids" style="font-weight: 500;">Número de Niños</label>
+                                <select id="kids" name="09 - Kids" style="width: 120px; margin-top: 5px;">
+                                    <option value="" disabled selected>?</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <div id="kids-names-container" style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;">
+                                    <!-- Los nombres de los niños se generan dinámicamente -->
+                                </div>
+                                <div id="kids-menu-notice" style="display: none; margin-top: 12px; padding: 10px 14px; background: rgba(114, 47, 55, 0.08); border-radius: 6px; font-size: 0.9rem; color: var(--clr-burgundy); font-weight: 500;">
+                                    🍽️ ¡Habrá un menú especial para los pequeños!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dietary">Restricciones Dietéticas</label>
+                            <textarea id="dietary" name="11 - Dietary Restrictions" rows="2"
+                                placeholder="Haznos saber si tú o tus invitados tienen alergias..."></textarea>
+                        </div>
+
+                        <div class="form-group song-request">
+                            <label for="song">Solicitud de Canción 🎵</label>
+                            <p class="form-hint">¡Ayúdanos a crear la playlist de la fiesta!</p>
+                            <div style="display:flex;gap:0.5rem;align-items:center;">
+                                <input type="text" id="song" name="12 - Song Request" placeholder="Nombre de la canción - Artista" style="flex:1;">
+                                <button type="button" style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:2px solid var(--clr-burgundy);background:transparent;color:var(--clr-burgundy);font-size:1.2rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;" id="add-song-btn" onclick="addSecondSong()">+</button>
+                            </div>
+                            <div id="song2-container" style="display:none;margin-top:0.75rem;flex-direction:row;gap:0.5rem;align-items:center;">
+                                <input type="text" id="song2" name="12b - Song Request 2" placeholder="Nombre de la canción - Artista" style="flex:1;">
+                                <button type="button" style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:2px solid var(--clr-burgundy);background:transparent;color:var(--clr-burgundy);font-size:1.2rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;" onclick="removeSecondSong()">−</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Preguntas o Comentarios 💬</label>
+                            <p class="form-hint">¿Tienes alguna pregunta o quieres compartir algo con nosotros? ¡Nos encantaría escucharte!</p>
+                            <textarea id="comment" name="13 - Comment" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full glow-effect">Enviar confirmación</button>
+                    </form>
+                    <div id="rsvp-success" class="rsvp-success hidden">
+                        <h3>¡Gracias!</h3>
+                        <p>Hemos recibido tu confirmación. ¡No podemos esperar para verte!</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Si algo cambia, contáctanos en <a href="mailto:michael.cartier@me.com" style="text-decoration: underline;">michael.cartier@me.com</a> o <a href="mailto:kara.lopez@icloud.com" style="text-decoration: underline;">kara.lopez@icloud.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="logo-mk footer-logo">
+                    <span class="m">M</span><span class="k">K</span>
+                </div>
+                <p>&copy; 2026 Karina & Michaël. Todos los derechos reservados.</p>
+                <p class="made-with-love">Hecho con ♥</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
