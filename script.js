@@ -178,20 +178,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(rsvpForm);
 
         const isFrench = document.documentElement.lang === 'fr';
+        const isSpanish = document.documentElement.lang === 'es';
         const isAttending = attendanceSelect.value === 'yes';
 
         const contactLine = `<p style="margin-top: 1rem; font-size: 0.9rem;">${isFrench
             ? 'Si quelque chose change de votre côté, contactez-nous à'
+            : isSpanish ? 'Si algo cambia, contáctanos en'
             : 'If anything changes, just reach out to'
-        } <a href="mailto:michael.cartier@me.com" style="text-decoration: underline;">michael.cartier@me.com</a> ${isFrench ? 'ou' : 'or'} <a href="mailto:kara.lopez@icloud.com" style="text-decoration: underline;">kara.lopez@icloud.com</a>.</p>`;
+        } <a href="mailto:michael.cartier@me.com" style="text-decoration: underline;">michael.cartier@me.com</a> ${isFrench ? 'ou' : isSpanish ? 'o' : 'or'} <a href="mailto:kara.lopez@icloud.com" style="text-decoration: underline;">kara.lopez@icloud.com</a>.</p>`;
 
         if (isAttending) {
-            rsvpSuccess.innerHTML = `<h3>${isFrench ? 'Merci !' : 'Thank you!'}</h3>
-                <p>${isFrench ? 'Votre RSVP a bien été reçu. Nous avons hâte de vous voir !' : "Your RSVP has been received. We can't wait to see you!"}</p>
+            rsvpSuccess.innerHTML = `<h3>${isFrench ? 'Merci !' : isSpanish ? '¡Gracias!' : 'Thank you!'}</h3>
+                <p>${isFrench ? 'Votre RSVP a bien été reçu. Nous avons hâte de vous voir !' : isSpanish ? 'Hemos recibido tu confirmación. ¡No podemos esperar para verte!' : "Your RSVP has been received. We can't wait to see you!"}</p>
                 ${contactLine}`;
         } else {
-            rsvpSuccess.innerHTML = `<h3>${isFrench ? 'C\'est dommage !' : 'We\'ll miss you!'}</h3>
-                <p>${isFrench ? 'Nous sommes tristes de ne pas pouvoir vous compter parmi nous.' : "We're sad to hear you can't join us."}</p>
+            rsvpSuccess.innerHTML = `<h3>${isFrench ? 'C\'est dommage !' : isSpanish ? '¡Te echaremos de menos!' : 'We\'ll miss you!'}</h3>
+                <p>${isFrench ? 'Nous sommes tristes de ne pas pouvoir vous compter parmi nous.' : isSpanish ? 'Nos da pena que no puedas acompañarnos.' : "We're sad to hear you can't join us."}</p>
                 ${contactLine}`;
         }
 
