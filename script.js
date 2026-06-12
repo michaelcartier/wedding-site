@@ -324,7 +324,11 @@ function removeSecondSong() {
         if (existing) existing.remove();
         var el = document.createElement('div');
         el.id = 'pikachu-egg';
-        el.textContent = '\u26A1\uD83D\uDC2D\u26A1';
+        var img = document.createElement('img');
+        img.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png';
+        img.alt = 'Pikachu';
+        img.style.cssText = 'width:160px;height:160px;object-fit:contain;';
+        el.appendChild(img);
         document.body.appendChild(el);
         setTimeout(function () {
             el.classList.add('hiding');
