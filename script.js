@@ -302,3 +302,32 @@ function removeSecondSong() {
     if (inp) inp.value = '';
     if (btn) btn.style.display = 'inline-flex';
 }
+
+// Pikachu Easter egg — triple-click the logo
+(function () {
+    var clicks = 0, timer = null;
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-logo')) return;
+        clicks++;
+        clearTimeout(timer);
+        if (clicks >= 3) {
+            clicks = 0;
+            showPikachu();
+            return;
+        }
+        timer = setTimeout(function () { clicks = 0; }, 600);
+    });
+
+    function showPikachu() {
+        var existing = document.getElementById('pikachu-egg');
+        if (existing) existing.remove();
+        var el = document.createElement('div');
+        el.id = 'pikachu-egg';
+        el.textContent = '\u26A1\uD83D\uDC2D\u26A1';
+        document.body.appendChild(el);
+        setTimeout(function () {
+            el.classList.add('hiding');
+            setTimeout(function () { el.remove(); }, 700);
+        }, 2000);
+    }
+}());
