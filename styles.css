@@ -1221,3 +1221,9 @@ img {
     from { bottom: 40px; opacity: 1; }
     to   { bottom: -180px; opacity: 0; }
 }
+
+.footer-logo {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
