@@ -303,11 +303,12 @@ function removeSecondSong() {
     if (btn) btn.style.display = 'inline-flex';
 }
 
-// Pikachu Easter egg — triple-click the logo
+// Pikachu Easter egg — triple-click the footer logo
 (function () {
     var clicks = 0, timer = null;
-    document.addEventListener('click', function (e) {
-        if (!e.target.closest('.nav-logo')) return;
+    document.addEventListener('mousedown', function (e) {
+        if (!e.target.closest('.footer-logo')) return;
+        e.preventDefault();
         clicks++;
         clearTimeout(timer);
         if (clicks >= 3) {
@@ -315,7 +316,7 @@ function removeSecondSong() {
             showPikachu();
             return;
         }
-        timer = setTimeout(function () { clicks = 0; }, 600);
+        timer = setTimeout(function () { clicks = 0; }, 800);
     });
 
     function showPikachu() {
